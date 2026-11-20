@@ -9,7 +9,7 @@ One agent skill — `line-login` — that teaches an AI agent to integrate LINE 
 ## Where to look
 
 | Task | Reach for |
-|---|---|
+| --- | --- |
 | Writing or changing the skill's guidance | `skills/line-login/SKILL.md` — the entry point; ≤500 lines, detail behind pointers |
 | Protocol facts: authorize URL, callback, scopes, consent, token endpoints, status codes, LIFF | `skills/line-login/references/*.md` — one file per topic; SKILL.md's References section maps topic → file |
 | Vocabulary: Channel ID, State, Code Challenge, access token vs channel access token | `GLOSSARY.md` — one canonical definition per term |
