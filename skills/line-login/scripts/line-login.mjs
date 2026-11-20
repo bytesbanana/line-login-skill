@@ -99,8 +99,8 @@ function baseUrl(flags) {
   return flags["base-url"] || process.env.LINE_API_BASE_URL || DEFAULT_BASE_URL;
 }
 
-function scopeList(flags) {
-  const raw = requireFlag(flags, "scope", "authorize");
+function scopeList(flags, subcommand) {
+  const raw = requireFlag(flags, "scope", subcommand);
   return raw.split(/\s+/).filter(Boolean);
 }
 
@@ -209,7 +209,7 @@ const SUBCOMMANDS = {
   async "new-session"(flags) {
     const cid = requireFlag(flags, "client-id", "new-session");
     const redirectUri = requireFlag(flags, "redirect-uri", "new-session");
-    const scope = scopeList(flags);
+    const scope = scopeList(flags, "new-session");
     const usePkce = flags["no-pkce"] !== true;
 
     const state = randomString(32, STATE_CHARS);
@@ -243,7 +243,7 @@ const SUBCOMMANDS = {
   async "authorize-url"(flags) {
     const cid = requireFlag(flags, "client-id", "authorize-url");
     const redirectUri = requireFlag(flags, "redirect-uri", "authorize-url");
-    const scope = scopeList(flags);
+    const scope = scopeList(flags, "authorize-url");
     return {
       authorize_url: buildAuthorizeUrl({
         clientId: cid,
