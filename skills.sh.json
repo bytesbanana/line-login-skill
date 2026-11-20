@@ -1,0 +1,11 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "LINE",
+      "description": "Skills for LINE Login — OAuth2/OIDC web login, PKCE, access/ID token management, and LIFF handoff.",
+      "skills": ["line-login"]
+    }
+  ]
+}
