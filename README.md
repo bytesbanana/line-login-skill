@@ -6,7 +6,6 @@ Agent guidance for integrating LINE Login (v2.1) into a web app: OAuth 2.0 autho
 
 ```
 line-login-skill/
-├── PLAN.md                 # Build plan for the skill
 ├── GLOSSARY.md             # Canonical terms (Channel ID, State, Code Challenge, …)
 ├── SOURCES.md              # Source URL → what it feeds → verified date
 ├── LICENSE                 # MIT
@@ -42,7 +41,7 @@ node skills/line-login/scripts/line-login.mjs new-session \
 
 ## Activation
 
-Activate when adding LINE Login to an app, implementing the authorization callback, wiring PKCE, handling scopes and consent, or debugging LINE Login token, `state`, or consent-revocation errors. See `PLAN.md` for scope, reference inventory, CLI contract, and the acceptance checklist.
+Activate when adding LINE Login to an app, implementing the authorization callback, wiring PKCE, handling scopes and consent, or debugging LINE Login token, `state`, or consent-revocation errors. Scope, the reference inventory, and the CLI contract live in `skills/line-login/SKILL.md` and `skills/line-login/references/`.
 
 ## Trademarks
 
